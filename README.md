@@ -1,88 +1,92 @@
 # Fantasy Cricket XI Predictor
 
-An ML-based Fantasy Cricket team selector that predicts player performance and generates an optimal XI using XGBoost.
+A machine learning-based web app that predicts fantasy cricket scores for players and generates an optimal playing XI using XGBoost.
+
+---
+
+## Overview
+
+This project takes match-level player statistics as input and predicts fantasy points. Based on predictions, it selects the best 11 players and assigns Captain and Vice-Captain roles.
 
 ---
 
 ## Features
 
-- Upload match-wise player CSV
-- Predict fantasy scores using trained ML model
-- Auto-select Best XI (Top 11 players)
-- Captain and Vice-Captain selection
-- Streamlit web app
+- Upload match-wise player dataset (CSV)
+- Predict fantasy scores using trained XGBoost model
+- Rank players automatically
+- Generate Best XI (Top 11 players)
+- Assign Captain and Vice-Captain
+- Streamlit-based interactive UI
 - Normalized ranking system (0–100 scale)
 
 ---
 
 ## Project Structure
 
+```bash
 project/
-│── app.py
-│── data/
+│
+├── app.py
+├── data/
 │   ├── fantasy_rank_model.pkl
 │   ├── features.json
-│── sample_match_big.csv
-│── requirements.txt
-│── README.md
-
+│
+├── sample_match_big.csv
+├── requirements.txt
+├── README.md
+```
 ---
 
 ## Installation
-
-### 1. Clone repository
-git clone https://github.com/your-username/fantasy-xi-predictor.git
-cd fantasy-xi-predictor
-
-### 2. Install dependencies
+##### 1. Clone repository
+```bash
+git clone https://github.com/parinaB/fantasyPlayerPrediction.git
+cd PlayerPredicts
+```
+#### 2. Install dependencies
+```bash
 pip install -r requirements.txt
-
-### 3. Run application
+```
+### 3. Run the app
+```bash
 streamlit run app.py
-
+```
 ---
-
 ## Input Format (CSV)
-
-Your CSV must include:
-
-player, match_id,
-avg_runs_last5,
-avg_wickets_last5,
-opp_bowling_strength,
-boundary_score,
-role_Batsman,
-role_Bowler,
-venue_avg_runs,
-opp_strength,
-last_runs,
+Your input CSV must contain:
+```bash
+player
+match_id
+avg_runs_last5
+avg_wickets_last5
+opp_bowling_strength
+boundary_score
+role_Batsman
+role_Bowler
+venue_avg_runs
+opp_strength
+last_runs
 last_wickets
-
+```
 ---
-
-## Model
-
-- Algorithm: XGBoost Regressor
-- Output: Predicted Fantasy Score
-- Ranking: Min-max normalized to 0–100
-
+## Model Details
+  - Algorithm: XGBoost Regressor
+  - Output: Predicted fantasy score
+  - Ranking: Min-max normalized (0–100 scale)
 ---
-
 ## Output
-
-- Top 11 Fantasy XI
-- Captain and Vice-Captain
-- Player ranking table
-
----
-
+  - Top 11 Fantasy XI
+  - Captain and Vice-Captain
+  - Player ranking table
+  - Average and maximum predicted score
+--- 
 ## Notes
-
+```bash
 - Feature names must match features.json exactly
-- Model works on engineered match-level features only
-
+- Model expects engineered features only
+- Ensure CSV format is correct before upload
+```
 ---
+Built for machine learning practice and fantasy sports analytics
 
-## Author
-
-Built for ML learning and fantasy cricket analytics
