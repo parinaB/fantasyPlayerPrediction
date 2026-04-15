@@ -1,0 +1,12 @@
+player,match_id,avg_runs_last5,avg_wickets_last5,opp_bowling_strength,boundary_score,role_Batsman,role_Bowler,venue_avg_runs,opp_strength,last_runs,last_wickets
+V Kohli,1,48,0,120,85,1,0,180,110,55,0
+R Sharma,1,42,0,120,80,1,0,180,110,50,0
+S Dhawan,1,38,0,120,70,1,0,180,110,40,0
+KL Rahul,1,45,0,120,75,1,0,180,110,47,0
+AB de Villiers,1,50,0,120,90,1,0,180,110,60,0
+MS Dhoni,1,30,0,120,60,1,0,180,110,35,0
+B Kumar,1,12,2,120,25,0,1,180,110,15,2
+J Bumrah,1,10,3,120,20,0,1,180,110,12,3
+Y Chahal,1,15,2,120,30,0,1,180,110,18,2
+R Ashwin,1,18,2,120,35,0,1,180,110,20,2
+Hardik Pandya,1,35,1,120,65,1,1,180,110,40,1
